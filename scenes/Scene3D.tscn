@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://clewejml1cta2"]
+
+[ext_resource type="Material" uid="uid://bi5yvain23wkw" path="res://assets/template/materials/prototype.tres" id="1_ppb3h"]
+
+[node name="Scene3D" type="Node3D"]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+material_override = ExtResource("1_ppb3h")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+size = Vector3(50, 1, 50)

@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwea15sjmj1ki"]
+
+[ext_resource type="Texture2D" uid="uid://cb0ugq08076sr" path="res://assets/template/images/32pxCircle.png" id="1_y2da0"]
+[ext_resource type="Texture2D" uid="uid://bghjbnkjkua7r" path="res://assets/template/images/32pxSquare.png" id="2_ihv37"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dcrv0"]
+radius = 16.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ju6mw"]
+size = Vector2(32, 32)
+
+[node name="Scene2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_dcrv0")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_y2da0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, 308)
+scale = Vector2(36, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_ju6mw")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("2_ihv37")
